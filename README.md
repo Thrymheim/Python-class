@@ -37,7 +37,7 @@ By the end of this course, you will be able to:
 2. Write simple Python programs.
 3. Use control structures like loops and conditionals.
 4. Work with data types such as lists, dictionaries, sets and tuples.
-5. Making Classes and writing defs.
+5. Implement classes and create methods to encapsulate functionality.
 6. Write functions and understand their importance.
 7. Debug and troubleshoot simple problems in your code.
 
