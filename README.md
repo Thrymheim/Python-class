@@ -1,3 +1,4 @@
+![Python Logo](https://www.python.org/static/community_logos/python-logo-master-v3-TM.png)
 # Python Beginner Class README
 
 Welcome to the Python Beginner Class! This course is designed for individuals who have little to no experience with programming and wish to learn Python, one of the most popular and versatile programming languages.
