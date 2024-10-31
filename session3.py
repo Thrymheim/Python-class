@@ -53,7 +53,7 @@ students = ["amir","ALI","mmd"]
 studentsA = students[0:2] 
 print (studentsA)
 
-number = int(input("pls enter a number : "))
+number = int(input("pls enter a number: "))
 if number > 10 :
  print ("pass")
 elif number == 10 :
@@ -61,7 +61,7 @@ elif number == 10 :
 else :
  print ("fail")
 
-seasson=int(input())
+seasson=int(input("pls enter a number: "))
 if seasson==1:
   print("bahar")
 elif seasson==2:
@@ -73,27 +73,27 @@ elif seasson==4:
 else:
   print("Error")
 
-name = input("pls enter a name")
+name = input("pls enter a name: ")
 if name == "maziyar" :
  print ("ostad")
 else :
  print ("student")
 
-name=input()
+name=input("pls enter a name: ")
 if name!="maziyar":
   print("student")
 else:
   print("ostad")
 
 #and
-number = int(input("pls enter a number so i tell u if u can divide it by 6 "))
+number = int(input("pls enter a number so i tell u if u can divide it by 6: "))
 if number%2==0 and number%3==0 :
  print ("yes u can divide it")
 else :
  print ("no u cant")
 
 #or
-number = int(input("Enter a number "))
+number = int(input("Enter a number: "))
 if number>10 or number==10 :
  print ("pass")
 else :
