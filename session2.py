@@ -17,8 +17,6 @@ lastName="kolagar"
 fullName="{}  {}".format(firstName.upper(),lastName.title())
 print(fullName)
 
-
-
 userName="  maziyar      x        "
 print(userName.lstrip())
 print(userName.rstrip())
@@ -37,7 +35,6 @@ print(type(height))
 z=5+3j #j represents the imaginary unit (√-1).
 print(z.real)
 print(z.imag)
-
 
 a,b=2,3
 print(a+b)
@@ -73,4 +70,3 @@ print(type(scores))
 print(len(scores))
 print(sorted(scores))
 print(sorted(scores, reverse=True))
-
