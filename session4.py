@@ -103,12 +103,17 @@ while i<=n:
 print(fact)
 
 #رقم های یک عدد را باهم جمع میکند
-n=int(input("please enter n: "))
-sum=0
-while n>0:
-  sum=sum+(n%10) 
-  n//=10 # n = n // 10
-print(sum)
+# Ask the user to enter an integer  
+n = int(input("Please enter an integer n: "))  # For example, if the user inputs 123    
+sum = 0  
+# Loop while n is greater than 0  
+while n > 0:  
+    # Add the last digit of n to sum  
+    sum = sum + (n % 10)  # For 123, this adds 3 (123 % 10)  
+    # Remove the last digit from n and when n got only one digit left just add the digit to sum
+    n //= 10  # Now n becomes 12 (123 // 10)  
+# Print the sum of the digits 
+print(sum)  # For 123, this will eventually print 6 (3 + 2 + 1)
 
 #While True
 while True:
