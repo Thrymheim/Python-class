@@ -98,59 +98,17 @@ while i<=n:
 n=int(input("please enter number:"))
 i,fact=1,1
 while i<=n:
-  fact=fact*i #عدد  جدید را در عدد قبلی ضرب میکند
-  #fact*=i
-  i+=1
+  fact*=i #عدد  جدید را در عدد قبلی ضرب میکند --> fact = fact * i
+  i+=1 #i = i + 1
 print(fact)
-
-#ارقام را میشکند و سراخر تعداد را میشمارد
-n = int(input("Please enter n: "))  
-original_n = n  # Keep the original value for later use  
-counter = 0  
-# First, let's find the total number of digits  
-while n > 0:  
-    digit = n % 10        # Get the last digit  
-    print(digit, end=" ") # Print the digit  
-    counter += 1          # Increment the counter  
-    n = n // 10           # Remove the last digit  
-print("\nTotal number of digits:", counter)
-
-# Example:
-# n = 123
-# digit = n % 10 → digit = 123 % 10 = 3
-# print(digit, end=" ") → Outputs 3 (the last digit).
-# counter += 1 → counter becomes 1.
-# n = n // 10 → n now becomes 123 // 10 = 12
 
 #رقم های یک عدد را باهم جمع میکند
 n=int(input("please enter n: "))
 sum=0
 while n>0:
-  sum=sum+(n%10) #sum=sum+n%10
-  n//=10
+  sum=sum+(n%10) 
+  n//=10 # n = n // 10
 print(sum)
-
-#عدد را برعکس میکند
-n = int(input("Please enter n: "))  
-reverse = 0  
-while n > 0:  
-    digit = n % 10  
-    reverse = reverse * 10 + digit  # Build the reversed number  
-    n //= 10                        # Remove the last digit  
-print("Reversed number:", reverse)  
-
-#ایا معکوس با عدد فعلی برابر است؟
-n=int(input("please enter n: "))
-reverse=0
-temp=n
-while n>0:
-  reverse=reverse*10+(n%10)
-  n//=10
-# print(reverse)
-if reverse==temp:
-  print("yes")
-else:
-  print("no")
 
 #While True
 while True:
@@ -165,14 +123,3 @@ while True:
     break
   else:
     print("you`r input invalid option,try agin please!")
-##############################################################################
-#Taklif bashe
-numbers=[]
-while True:
-  number=int(input("please enter number: "))
-  numbers.append(number)
-  option=input("do you want continue?y/n")
-  if option.lower()=='n':
-    break
-
-print(sum(numbers)/len(numbers))
