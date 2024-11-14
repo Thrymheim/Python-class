@@ -5,14 +5,14 @@ if num % 2 == 0:
 else:  
     print('fard')  
 
-#عدد را برعکس میکند
-n = int(input("Please enter n: "))  
-reverse = 0  
-while n > 0:  
-    digit = n % 10  
-    reverse = reverse * 10 + digit  # Build the reversed number  
-    n //= 10                        # Remove the last digit  
-print("Reversed number:", reverse)  
+#تعداد ارقام
+number = int(input("enter a number: "))
+count = 0
+while number:
+    number //= 10  
+    count += 1
+print(f" {count}")
+
 
 #ایا معکوس با عدد فعلی برابر است؟
 n=int(input("please enter n: "))
@@ -59,7 +59,7 @@ for i in range (0,n+1) :
 
 #and if for example i want it go like 0 2 4 6
 n=int(input())
-for i in range (0,n+1,2) :
+for i in range (0,n,2) :
  print (i)
 
 #takes number 5 time and and multiplies it by 2 
@@ -76,7 +76,7 @@ for i in range(1, 6):  # Outer loop for rows
 #for in list
 students = ["amir","ali","reza"]
 for student in students :
- print (f"hello Mr.{student.title()}")
+ print (f"hello {student.title()}")
 
 #Average
 numbers = [20,9,8,7,6,3,16]
@@ -86,7 +86,6 @@ for number in numbers :
   #avg = avg + number
 print (avg/len(numbers))
 
-#Class
 students ["ali","ghadir","goli","mmd","reza"]
 programmers = ["ali","ghadir"]
 for student in students :
@@ -107,24 +106,11 @@ for i in range(0,10):
         break
     print(i)
 
-#class - عدد اول عددی است که تنها بر یک و خود بخش پذیر باشد
+# عدد اول عددی است که تنها بر یک و خود بخش پذیر باشد
 n=int(input("please enter number: "))
 for i in range(2,n):
   if n%i==0:
-    print("not-prime")
+    print("No")
     break
 else:
-  print("prime")
-
-#Class
-n= int(input("please enter n: "))
-sumP,sumN,sumZ=0,0,0
-for i in range(0,n):
-  number=int(input("please enter number: "))
-  if number>0:
-    sumP+=1
-  elif number==0:
-    sumZ+=1
-  else:
-    sumN+=1
-print(f"{sumP}  ,  {sumN} , {sumZ}")
+  print("Yes")
