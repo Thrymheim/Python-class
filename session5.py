@@ -35,7 +35,6 @@ while True:
   option=input("do you want continue? (yes/no) : ")
   if option.lower()=='no':
     break
-
 print(sum(numbers)/len(numbers))
 
 #######################################################################
