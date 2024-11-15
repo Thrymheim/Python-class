@@ -85,7 +85,7 @@ for number in numbers :
   #avg = avg + number
 print (avg/len(numbers))
 
-students ["ali","ghadir","goli","mmd","reza"]
+students = ["ali","ghadir","goli","mmd","reza"]
 programmers = ["ali","ghadir"]
 for student in students :
  if student in programmers :
