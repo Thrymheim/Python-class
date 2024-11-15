@@ -38,6 +38,7 @@ while True:
 print(sum(numbers)/len(numbers))
 
 #######################################################################
+
 #continue with while
 i = 0
 while i < 10:
@@ -70,7 +71,6 @@ for i in range(0,5):
 for i in range(1, 6):  # Outer loop for rows  
     for j in range(1, 6):  # Inner loop for columns  
         print(f"{i} * {j} = {i * j}")  
-    print()  # Print a new line after each row
 
 #for in list
 students = ["amir","ali","reza"]
