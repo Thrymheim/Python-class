@@ -115,7 +115,6 @@ print(favoriteLanguages.items()) #key + value
 print(favoriteLanguages.keys())
 print(favoriteLanguages.values())
 
-#class
 #This method gets the keys and values together
 for name,language in favoriteLanguages.items():
   print(f"{name.upper()} favorite language is {language.title()}")
