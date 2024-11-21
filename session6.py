@@ -1,13 +1,10 @@
 # تخفیف
-for i in range(0, 5):
-    price = int(input(f"Enter price {i+1}: "))
-    
-    if price > 100:
-        discount = price * 0.1
-        new_price = price - discount
-        print(f"Price after 10% discount: {new_price}")
+for i in range(0,5):
+    price=int(input('Enter a price: '))
+    if price<100:
+        print(price)
     else:
-        print(f"Price: {price} (no discount)")
+        print(price-price/10)
         
 #مثلث خیام
 n = int(input("Enter number of rows: "))
@@ -17,10 +14,9 @@ for i in range(1, n+1):
     print()
 
 #اسامی 
-names = ["ali", "sara", "test", "reza", "mina", "tina"]
+names = ["ali", "sara", "maziyar", "mohammad", "abolfazl"]
 for name in names:
-    if len(name) < 4:
-        print(f"{name} is too short - skipping")
+    if len(name) < 5:
         continue
     print(f"Valid name found: {name}")
 
@@ -30,9 +26,8 @@ factorial = 1
 
 for i in range(1, number + 1):
     factorial = factorial * i
-    print(f"Step {i}: {factorial}")
     
-print(f"\nFinal factorial of {number} is: {factorial}")
+print(f"factorial of {number} is: {factorial}")
 
 ###############################################################
 
@@ -60,17 +55,11 @@ user2={
 }
 username,password=input("please enter username: "),input("please enter password: ")
 if username==user1['username'] and password==user1['password']:
-  print("login")
+  print("login user1")
 elif username==user2['username'] and password==user2['password']:
-  print('login')
+  print('login user2')
 else:
-  print("cant login")
-
-#Class write with and or
-if (username==user1['username'] and password==user1['password']) or (username==user2['username'] and password==user2['password']):
-  print("login")
-else:
-  print("cant login")  
+  print("Error")
 
 student={
   'name':'adabi',
@@ -130,6 +119,3 @@ print(favoriteLanguages.values())
 #This method gets the keys and values together
 for name,language in favoriteLanguages.items():
   print(f"{name.upper()} favorite language is {language.title()}")
-#This method gets only the keys first, then uses dictionary for values
-for name in favoriteLanguages.keys():
-  print(f"{name.upper()} favorite language is {favoriteLanguages[name].title()}")
