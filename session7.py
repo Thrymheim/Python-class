@@ -65,27 +65,6 @@ for user in users:
 else:
   print("you need sign up at first")
 
-#Class
-students1={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-students2={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-students3={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-all=[students1,students2,students3]
-for i in all:
-  for name,info in i.items():
-    print(f"{name} info: {info}")
-
 #List can be in dictionary
 programmers={
   'amir':['cpp','python','web'],
@@ -106,7 +85,7 @@ students={
 for name,info in students.items():
   print(f"{name} info: {info}")
 
-#Class
+#Another example
 books = {
     'book1': {'title': '1984', 'author': 'George Orwell', 'year': 1949},
     'book2': {'title': 'To Kill a Mockingbird', 'author': 'Harper Lee', 'year': 1960},
@@ -139,7 +118,7 @@ school_data = (
     ('Class A', ('John', 'Mary', 'Peter')),
     ('Class B', ('Sarah', 'Tom', 'Lucy'))
 )
-print(school_data[0][1][1])  # Access students in Class A
+print(school_data[0][1][1])  # Will print student from first row, second col, number 1 in tuple --> Mary
 
 # Tuple Methods
 grades = (95, 87, 92, 95, 87, 90)
@@ -151,7 +130,6 @@ numbers = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
 print(numbers[2:5])    # Elements from index 2 to 4
 print(numbers[:4])     # Elements from start to index 3
 print(numbers[6:])     # Elements from index 6 to end
-print(numbers[::2])    # Every second element
 
 # Tuple in Loop
 courses = ('Python', 'Java', 'C++', 'JavaScript')
@@ -166,13 +144,10 @@ numeric_tuple = (23, 45, 12, 67, 89, 34)
 print(f"Minimum: {min(numeric_tuple)}")
 print(f"Maximum: {max(numeric_tuple)}")
 
-#Class - Define two students with grades
+#Example
 student1 = ('Alice', 20, 'Biology', (85, 90, 78))
 student2 = ('Bob', 22, 'Mathematics', (88, 92, 95))
-
-# Input from user for student name
 student_name = input("Enter student name (Alice/Bob): ")
-
 if student_name == student1[0]:
     print(f"Found: {student1}")
     print(f"Grades: {student1[3]}")
@@ -181,3 +156,9 @@ elif student_name == student2[0]:
     print(f"Grades: {student2[3]}")
 else:
     print("Student not found")
+
+#PIP (pip Install Packages)
+pip install Django #Enter this in your terminal
+django-admin startproject projectname #write this in CMD and put your project name in projectname
+python manage.py migrate #In our project terminal
+python manage.py runserver #In our project terminal
