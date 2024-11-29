@@ -65,7 +65,3 @@ For any questions or concerns regarding the course, please reach out to:
 - **Instructor:** [Maziyar kolagar]
 - **Email:** [maziyarkolagar@gmail.com]
 - **Office Hours:** [saturday, Wednesday, friday]
-
----
-
-We are excited to have you in this Python Beginner Class! Get ready to embark on your programming journey and unlock the world of possibilities with Python. Happy coding!
