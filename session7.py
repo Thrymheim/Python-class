@@ -65,7 +65,6 @@ for user in users:
 else:
   print("you need sign up at first")
 
-#Class
 students1={
   'amir':{'age':23,'skill':'python'},
   'ali':{'age':25,'skill':'cpp'},
@@ -106,7 +105,6 @@ students={
 for name,info in students.items():
   print(f"{name} info: {info}")
 
-#Class
 books = {
     'book1': {'title': '1984', 'author': 'George Orwell', 'year': 1949},
     'book2': {'title': 'To Kill a Mockingbird', 'author': 'Harper Lee', 'year': 1960},
