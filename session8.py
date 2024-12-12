@@ -109,79 +109,22 @@ else:
 
 #File
 #Write in file
-file=open('products.txt','w')
-file.write("namayandeh ha\nmohesen")
+file=open('name.txt','w')
+file.write("Maziyar")
 
 #Read file
-productsFile=open('products.txt','r')
-print(productsFile.read())
+file=open('name.txt','r')
+print(file.read())
 
 #Append to existing file
-file=open('products.txt','a')
-file.write("amir")
+file=open('name.txt','a')
+file.write(" kolagar")
 
-#Class
 #Create new file and then write your name and age in it and then read it
 file=open('Me.txt','w')
 file.write("Maziyar\n20")
 file=open('Me.txt','r')
 print(file.read())
-
-# Dictionary of students with grades and info
-students = {
-    "Alice": {
-        "age": 20,
-        "grades": [85, 90, 92],
-        "active": True
-    },
-    "Bob": {
-        "age": 19,
-        "grades": [75, 82, 88],
-        "active": False
-    }
-}
-
-# Class
-# Create a new file and write student records to it name, active, age, average, and grade status A B C D
-file = open('student_data.txt', 'w')
-file.write("STUDENT RECORDS\n")
-
-# Process each student
-for student_name, student_data in students.items():
-    print(f"\nStudent: {student_name}")
-    
-    # Check status
-    if student_data["active"]:
-        status = "Currently Enrolled"
-    else:
-        status = "Not Enrolled"
-        
-    # Calculate average directly
-    average = sum(student_data["grades"]) / len(student_data["grades"])
-    
-    # Grade evaluation
-    if average >= 90:
-        grade_status = "A"
-    elif average >= 80:
-        grade_status = "B"
-    elif average >= 70:
-        grade_status = "C"
-    else:
-        grade_status = "D"
-    
-    # Write to file
-    file = open('student_data.txt', 'a')
-    file.write(f"\n{student_name}\n")
-    file.write(f"Status: {status}\n")
-    file.write(f"Age: {student_data['age']}\n")
-    file.write(f"Average: {average}\n")
-    file.write(f"Grade: {grade_status}\n")
-    
-    # Display on screen
-    print(f"Status: {status}")
-    print(f"Age: {student_data['age']}")
-    print(f"Average: {average}")
-    print(f"Grade: {grade_status}")
 
 #Set
 #Set is unpedictable and u cant edit it and it cant have repedetive items
@@ -248,7 +191,7 @@ car2={"pride","peikan","pezho","bmw"}
 car1.symmetric_difference_update(car2)
 print(car1)
 
-#Class
+#Example
 # Step 1: Create sets for courses
 math_students = {"Alice", "Bob", "Charlie", "David"}
 science_students = {"Bob", "Eve", "Frank", "Charlie"}
@@ -274,3 +217,20 @@ print(f"Total Science Students: {len(science_students)}")
 print(f"Total Unique Students: {len(all_students)}")
 print(f"Students Enrolled in Both Courses: {len(common_students)}")
 print(f"Students Enrolled in Only One Course: {len(unique_students)}")
+
+# 1. Basic Function Definition
+def sayHello():
+    print("hello")
+sayHello()
+
+# 2. Functions with Input
+def multiplyFive():
+    n = int(input("Please enter number for multiplication: "))
+    print(n * 5)
+multiplyFive()
+
+# 3. Functions with Parameters
+def multiplyFive(n):
+    print(f"{n} multiplied by 5 = {n * 5}")
+#we give it a number
+multiplyFive(10) 
