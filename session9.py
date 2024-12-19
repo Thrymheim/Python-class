@@ -106,6 +106,8 @@ for viewer in total_viewers:
 
 #######################################################################
 
+# یک و دو در جلسه قبل تدریس شدند
+
 # 3. Functions with Parameters
 def multiplyFive(n):
     print(f"{n} multiplied by 5 = {n * 5}")
@@ -115,49 +117,60 @@ multiplyFive(10)
 #user gives it a number
 number = int(input("Please enter number to multiply: "))
 multiplyFive(number)
-print()
 
 # 4. Functions with Default Parameters
 def Greet(name="amir", age=23):
     print(f"name is {name} and {age} year's old")
-
-print("Example 4: Default Parameters")
-Greet()
 Greet(name="ali", age=20)
-print()
 
 # 5. Functions with Return Values - they do the job but wont print anything until we print it
 def multiplyFive(n):
     return n * 5
 multiplyFive(5) # --> this will not print anything
 print(f"Direct print: {multiplyFive(5)}")
-
-#Class
 #user gives it a number
 result = int(input("Please enter number for multiplication: "))
 print(f"Result stored in variable: {multiplyFive(result)}")
 
-#Class
-# 6. Factorial Function
+# 6. Factorial Function with return
 def factorial(n):
     fact = 1
     for i in range(1, n + 1):
         fact *= i
     return fact
 print(f"Factorial of 5 is: {factorial(5)}")
+# توابع بازگشتی - مثال های اضافی برای یادگیری بیشتر
+#6.Sum function
+def sum_recursive(n):
+    if n == 0:
+        return 0
+    return n + sum_recursive(n - 1)
+print(f"Sum of first 5 numbers: {sum_recursive(5)}")
+
+# توابع بازگشتی - مثال های اضافی برای یادگیری بیشتر
+# 6. Factorial Function 
+def factorial_recursive(n):
+    if n == 1:
+        return 1
+    return n * factorial_recursive(n - 1)
+print(f"Factorial of 5 (recursive): {factorial_recursive(5)}")
+
+# توابع بازگشتی - مثال های اضافی برای یادگیری بیشتر
+# 6. Power Function - recursive
+def power(base, exponent):
+    if exponent == 0:
+        return 1
+    return base * power(base, exponent - 1)
+print(f"2^3 = {power(2, 3)}")
 
 # 7. Multiple Parameters
 def greet(name, lastName, age):
     return f"my name is {name} {lastName} and i am {age} year's old"
-
-print(greet("Maziyar", "kolagar", 20))
-
-#Class do it with user input
+#do it with user input
 name,lastname,age = input("Please enter your name, lastname and age: ").split() #split() splits the input by space
 print(greet(name,lastname,age))
 
-#Class
-#Calculator
+#8. Calculator
 def calculate(operation, a, b):
     if operation == "add":
         return a + b
@@ -171,7 +184,7 @@ def calculate(operation, a, b):
         return "Invalid operation"
 print(f"Add 5 and 3: {calculate('add', 5, 3)}")
 
-# 10. Dictionary Return
+# 9. Dictionary Return
 def makeDictionary(username, password, email):
     return {
         'username': username,
@@ -188,53 +201,20 @@ username,password,email = input("Please enter username and passsword and email: 
 user_info2 = makeDictionary(username, password, email)
 print(f"User Info: {user_info2}")
 
-#Class
-# 11. List Operations
-def introduce(users):
-    for user in users:
-        print(f"hello {user} welcome to page")
-users = ["amir", "ali", "reza"]
-introduce(users)
-
-# 12. Recursive Functions - توابع بازگشتی
-def sum_recursive(n):
-    if n == 0:
-        return 0
-    return n + sum_recursive(n - 1)
-print(f"Sum of first 5 numbers: {sum_recursive(5)}")
-
-#Class
-# 12. Factorial Function 
-def factorial_recursive(n):
-    if n == 1:
-        return 1
-    return n * factorial_recursive(n - 1)
-print(f"Factorial of 5 (recursive): {factorial_recursive(5)}")
-
-
-#Class
-# 12. Power Function - recursive
-def power(base, exponent):
-    if exponent == 0:
-        return 1
-    return base * power(base, exponent - 1)
-print(f"2^3 = {power(2, 3)}")
-
-# 13. Arbitrary Arguments آرگومان دلخواه
+# 10. Arbitrary Arguments آرگومان دلخواه
 # * means that we can pass as many arguments as we want
 def sayHello(*names):
     for name in names:
         print(f"hello {name}")
 sayHello("amir", "reza", "jfr", "mani")
 
-#class
-# 14. Temperature Converter 
+# 11. Temperature Converter 
 def convertToFahrenheit(*degrees):
     for degree in degrees:
         print(f"{degree}°C = {(degree * 1.8) + 32}°F")
 convertToFahrenheit(10, 20, 30)
 
-# 15. Keyword Arguments
+# 12. Keyword Arguments
 # ** means that we can pass as many key and value arguments as we want
 def introduceFoods(**foods):
     print("Menu Prices:")
@@ -242,21 +222,7 @@ def introduceFoods(**foods):
         print(f"{food} ----> {price}$")
 introduceFoods(burger=50, pizza=300, chicken=200)
 
-# 16. Function as Parameter
-def apply_operation(func, number):
-    return func(number) # we call the function that is passed as a parameter
-
-def square(x):
-    return x * x
-
-def cube(x):
-    return x * x * x
-
-print(f"Square of 5: {apply_operation(square, 5)}")
-print(f"Cube of 5: {apply_operation(cube, 5)}")
-
-# 17. Lambda Functions
-#Class - to write this first
+# 13. Lambda Functions
 #its same as 
 def multiply(x, y):
      return x * y
@@ -266,8 +232,7 @@ print(f"Multiply 5 and 3: {multiply(5, 3)}")
 multiply = lambda x, y: x * y
 print(f"Multiply 5 and 3: {multiply(5, 3)}")
 
-
-# 18. Nested Functions
+# 14. Nested Functions
 def outer_function(x):
     def inner_function(y):
         return x + y
@@ -275,7 +240,7 @@ def outer_function(x):
 add_five = outer_function(5)
 print(f"Adding 5 to 3: {add_five(3)}")
 
-# 19. Function with Error Handling
+# 15. Function with Error Handling
 def divide_numbers(a, b):
     try:
         result = a / b
@@ -288,27 +253,3 @@ print("Testing different division cases:")
 print(f"Normal division: {divide_numbers(10, 2)}")
 print(f"Division by zero: {divide_numbers(10, 0)}")
 print(f"String input: {divide_numbers('10', 2)}")
-
-# 20. Function with Multiple Returns
-def analyze_number(n):
-    is_even = n % 2 == 0
-    is_positive = n > 0
-    return is_even, is_positive
-number_info = analyze_number(-4)
-print(f"Number analysis - Even: {number_info[0]} \n Positive: {number_info[1]}")
-
-###############################
-#Class
-# 8. Reverse Number 
-def reverseNumber(n):
-    temp, reverse = n, 0
-    while temp > 0:
-        reverse = reverse * 10 + (temp % 10)
-        temp //= 10
-    if n == reverse:
-        print(f"{n} is palindrome")
-    else:
-        print(f"{n} is not palindrome")
-
-reverseNumber(121)
-reverseNumber(123)
