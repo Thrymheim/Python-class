@@ -137,6 +137,7 @@ def factorial(n):
         fact *= i
     return fact
 print(f"Factorial of 5 is: {factorial(5)}")
+
 # توابع بازگشتی - مثال های اضافی برای یادگیری بیشتر
 #6.Sum function
 def sum_recursive(n):
