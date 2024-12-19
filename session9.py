@@ -232,12 +232,12 @@ multiply = lambda x, y: x * y
 print(f"Multiply 5 and 3: {multiply(5, 3)}")
 
 # 14. Nested Functions
-def outer_function(x):
-    def inner_function(y):
-        return x + y
-    return inner_function
-add_five = outer_function(5)
-print(f"Adding 5 to 3: {add_five(3)}")
+def outer_function(x):    # Defines outer function that takes parameter x
+    def inner_function(y):    # Defines inner function that takes parameter y
+        return x + y          # Adds outer parameter x with inner parameter y
+    return inner_function     # Returns the inner function
+add_five = outer_function(5)  # Creates new function where x is fixed to 5
+print(f"Adding 5 to 3: {add_five(3)}")  # Calls add_five with y=3, prints result
 
 # 15. Function with Error Handling
 def divide_numbers(a, b):
