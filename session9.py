@@ -43,7 +43,6 @@ for student_name, student_data in students.items():
 
 #توابع ابتدایی
 def check_backpack(item):
-    # Game inventory as a dictionary
     backpack = {
         "sword": 1,
         "shield": 1,
