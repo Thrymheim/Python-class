@@ -103,7 +103,6 @@ for viewer in total_viewers:
         viewer_movies.append(movies["night"])
     print(f"{viewer} watched: {viewer_movies}")
 
-
 #######################################################################
 
 # یک و دو در جلسه قبل تدریس شدند
