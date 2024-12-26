@@ -98,12 +98,8 @@ print(type(s))
 s.firstName="ali"
 print(s.firstName)
 
-#Class - make your own class of name, lastname, age, and programmig language
-
 #Class Attributes
-#1. Class Attributes
 class Student:
-    #class attribute
     #class attribute is shared by all objects of a class
     schoolName="Mojtama fani tehran"
     age = 18
@@ -117,15 +113,7 @@ s = Student("amir","ahmadi",20)
 print(s.schoolName)
 print(s.calculateBirthyear())
 
-#Class - Mostatil Class - ussing input - no method
-class Mostatil :
-    def __init__ (self,tol,ars) :
-        self.tol=tol
-        self.ars=ars
-s=Mostatil(int(input('tol: ')),int(input('ars: ')))
-print(f"masahat = {s.tol * s.ars} and mohit {(s.ars + s.tol)*2}")   
-
-#Class - Method is a function in a class
+#Method is a function in a class
 class Mostatil :
      def __init__ (self,tol,ars) :
          self.tol=tol
@@ -152,13 +140,10 @@ class Employee :
         print(f"{1402-self.birthday}")
     def getTotalSallery(self):
         print(self.sallery * (1402-self.hiredYear) * 12) 
-    def increaseSallery(self,value):
-        self.sallery=self.sallery + (value/100) * self.sallery
 employee=Employee("Maziyar","kolagar",1000,"google",1383,1398)
 employee.printInfo()
 employee.getAge()
 employee.getTotalSallery()
-employee.increaseSallery(15)                 
 
 #None
 class ShoppingCart:
@@ -190,150 +175,3 @@ print(cart.get_last_added())  # Output: "Laptop"
 # Try discount
 cart.set_discount("SAVE10")
 print(cart.discount)  # Output: 0.1
-
-#Class
-class Student:
-    def __init__(self, name, student_id):
-        self.name = name
-        self.student_id = student_id
-        self.grades = []
-
-    def add_grade(self, grade):
-        self.grades.append(grade)
-    
-    def print_info(self):
-        print(f"Student Name: {self.name}")
-        print(f"Student ID: {self.student_id}")
-        print(f"Grades: {self.grades}")
-
-# Creating and using Student objects
-student1 = Student("Ali", "1001")
-student2 = Student("Sara", "1002")
-
-student1.add_grade(18)
-student1.add_grade(20)
-student2.add_grade(19)
-
-student1.print_info()
-print("\n")
-student2.print_info()
-
-#User guess - import random
-import random
-
-class NumberGuesser:
-    def __init__(self):
-        self.secret = random.randint(1, 10)
-    
-    def check_guess(self, guess):
-        if guess == self.secret:
-            print("You got it! 🎉")
-        elif guess > self.secret:
-            print("Too high! ⬆️")
-        else:
-            print("Too low! ⬇️")
-
-game = NumberGuesser()
-guess = int(input("Guess a number between 1-10: "))
-game.check_guess(guess)
-
-#Timer - import time
-import time
-
-class Timer:
-    def countdown(self, seconds):
-        print("Go!")
-        for i in range(seconds):
-            print(seconds - i)
-            time.sleep(1) #Wait for 1 second
-        print("Done!")
-
-t = Timer()
-t.countdown(3)
-
-###############################################################
-
-#Dice - import random
-import random
-
-class Dice:
-    def __init__(self, sides=6):
-        self.sides = sides
-        self.current_value = None
-        self.roll_history = []
-    
-    def roll(self):
-        self.current_value = random.randint(1, self.sides)
-        self.roll_history.append(self.current_value)
-        return self.current_value
-    
-    def get_roll_history(self):
-        return self.roll_history
-    
-    def get_average_roll(self):
-        if self.roll_history:
-            return sum(self.roll_history) / len(self.roll_history)
-        return 0
-
-# Create a regular 6-sided die
-my_dice = Dice()
-
-# Roll it 5 times
-print("Rolling the dice 5 times:")
-for i in range(5):
-    result = my_dice.roll()
-    print(f"Roll {i+1}: {result}")
-
-# Show statistics
-print("\nRoll history:", my_dice.get_roll_history())
-print(f"Average roll: {my_dice.get_average_roll():.2f}")
-
-# Create a special 20-sided die (like in D&D)
-d20 = Dice(20)
-print("\nRolling a 20-sided die:")
-print("Result:", d20.roll())
-
-
-#Class - Book Class
-class Book:
-    library_name = "City Library"
-    
-    def __init__(self, title, author):
-        self.title = title
-        self.author = author
-        self.is_available = True
-        self.current_borrower = None
-        self.borrow_history = []
-    
-    def borrow_book(self, student_name):
-        if self.is_available:
-            self.is_available = False
-            self.current_borrower = student_name
-            self.borrow_history.append(student_name)
-            return f"{student_name} borrowed '{self.title}'"
-        return f"'{self.title}' is not available"
-    
-    def return_book(self):
-        if not self.is_available:
-            self.is_available = True
-            self.current_borrower = None
-            return f"'{self.title}' has been returned"
-        return "Book already in library"
-    
-    def display_info(self):
-        status = "Available" if self.is_available else f"Borrowed by {self.current_borrower}"
-        print(f"\nTitle: {self.title}")
-        print(f"Author: {self.author}")
-        print(f"Status: {status}")
-
-# Example usage
-book1 = Book("anna karenina", "Leo Tolstoy")
-book2 = Book("100 years of solitude", "Gabriel Garcia Marquez")
-
-print(book1.borrow_book("Alice"))
-book1.display_info()
-
-print(book2.borrow_book("Bob"))
-print(book2.return_book())
-book2.display_info()
-
