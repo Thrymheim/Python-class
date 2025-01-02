@@ -132,6 +132,24 @@ class Person:
         else:
             print("Age must be between 0 and 120")
 
+    def setcountry(self,country):
+        self.country = country
+
+    def setlastName(self,lastName):
+        self.lastName = lastName
+
+    def setnc(self,nc):
+        self.nc=nc
+
+    def getcountry(self):
+        return self.country
+    
+    def getlastName(self):
+        return self.lastName
+    
+    def getnc(self):
+        return self.nc
+    
     def getfirstName(self):
         return self.firstName
 
