@@ -18,7 +18,9 @@ class GameCharacter:
         return f"{self.name} took {damage} damage! Health: {self.health}"
     
     def heal(self):
-        if self.coins >= 10:
+        if self.health >=100:
+            return f"Already Max!"
+        elif self.coins >= 10:
             self.coins -= 10
             self.health = 100
             return f"{self.name} is fully healed!"
@@ -82,8 +84,7 @@ print(account.get_balance())  # Shows $50
 
 
 
-# Example 1: Person-Employee Hierarchy
-# Demonstrates basic inheritance with getter/setter methods
+# Person-Employee inheritance
 class Person:
     def __init__(self, firstName, lastName, country, age, nc):
         self.firstName = firstName
@@ -108,7 +109,7 @@ print(employee.firstName)
 #When working with private or protected attributes
 #When you need to perform additional operations during get/set
 
-#This but with Setter and Getter:
+#Last example but with Setter and Getter:
 class Person:
     def __init__(self, firstName, lastName, country, age, nc):
         self.firstName = firstName
@@ -164,9 +165,7 @@ print(employee.getfirstName())  # Shows Ali
 print(employee.getage())  # Shows 25
 print(employee.getsalary())  # Shows 3000
 
-
-# Example 2: Food Hierarchy
-# Shows inheritance with method overriding
+#Food inhertitance
 class Food:
     def __init__(self, name, price):
         self.name = name
@@ -183,87 +182,8 @@ class Pizza(Food):
     def add_topping(self):
         print(f"Added {self.toppings} to {self.name}")
 
-class Drink(Food):
-    def __init__(self, name, price, size):
-        super().__init__(name, price)
-        self.size = size
-    
-    def make_cold(self):
-        print(f"Your {self.size} {self.name} is now cold!")
-
 # Test Menu
 pizza1 = Pizza("Pepperoni", 12, "extra cheese")
-drink1 = Drink("Coca Cola", 3, "large")
-
 pizza1.show_info()
 pizza1.add_topping()
-drink1.show_info()
-drink1.make_cold()
-
-#Protected - one underline in setter getter means protected and can be accessed inside the class and its subclasses
-class Food:
-    def __init__(self, name, price):
-        self._name = name
-        self._price = price
-    
-    def get_name(self):
-        return self._name
-    
-    def get_price(self):
-        return self._price
-    
-    def set_name(self, value):
-        self._name = value
-    
-    def set_price(self, value):
-        self._price = value
-    
-    def show_info(self):
-        print(f"{self._name}: ${self._price}")
-
-
-class Pizza(Food):
-    def __init__(self, name, price, toppings):
-        super().__init__(name, price)
-        self._toppings = toppings
-    
-    def get_toppings(self):
-        return self._toppings
-    
-    def set_toppings(self, value):
-        self._toppings = value
-    
-    def add_topping(self):
-        print(f"Added {self._toppings} to {self._name}")
-
-
-class Drink(Food):
-    def __init__(self, name, price, size):
-        super().__init__(name, price)
-        self._size = size
-    
-    def get_size(self):
-        return self._size
-    
-    def set_size(self, value):
-        self._size = value
-    
-    def make_cold(self):
-        print(f"Your {self._size} {self._name} is now cold!")
-
-# Test Menu
-pizza1 = Pizza("Pepperoni", 12, "extra cheese")
-drink1 = Drink("Coca Cola", 3, "large")
-
-# Using getters and setters
-pizza1.show_info()
-pizza1.add_topping()
-drink1.show_info()
-drink1.make_cold()
-
-# Example of using getters and setters
-print(pizza1.get_name())
-drink1.set_size("medium")
-print(drink1.get_size())
-
 
