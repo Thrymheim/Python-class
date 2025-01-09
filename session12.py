@@ -82,9 +82,6 @@ print(car.get_year())  # Output: 2021
 
 ####################################################################
 
-#توضیح کلی راجب پروژه
-#توضیح کلی راجب جزوه
-
 # Part 3: Advanced OOP Concepts
 # This session covers polymorphism, private and method overriding
 
@@ -115,82 +112,6 @@ rect = Rectangle(5, 3)
 circle = Circle(4)
 rect.calculate_area()
 circle.calculate_area()
-
-#Class
-# Base class representing a Payment Method
-class PaymentMethod:
-    def process_payment(self, amount):
-        """Process a payment. This method can be overridden by subclasses."""
-        return "Payment method not specified."
-
-# Derived class for Credit Card payments
-class CreditCard(PaymentMethod):
-    def process_payment(self, amount):
-        """Process a payment using a Credit Card."""
-        return f"Processing ${amount} via Credit Card... Approved!"
-
-# Derived class for PayPal payments
-class PayPal(PaymentMethod):
-    def process_payment(self, amount):
-        """Process a payment using PayPal."""
-        return f"Processing ${amount} via PayPal... Payment successful!"
-
-# Derived class for Bitcoin payments
-class Bitcoin(PaymentMethod):
-    def process_payment(self, amount):
-        """Process a payment using Bitcoin."""
-        return f"Processing ${amount} via Bitcoin... Transaction confirmed!"
-
-# Function to demonstrate polymorphism
-def make_payment(payment_method, amount):
-    """This function accepts any PaymentMethod object and processes the payment."""
-    print(payment_method.process_payment(amount))
-
-# Create instances of the payment methods
-credit_card = CreditCard()
-paypal = PayPal()
-bitcoin = Bitcoin()
-
-# Process payments using different payment methods
-make_payment(credit_card, 100.50)  # Output: Processing $100.50 via Credit Card... Approved!
-make_payment(paypal, 75.25)        # Output: Processing $75.25 via PayPal... Payment successful!
-make_payment(bitcoin, 200.00)      # Output: Processing $200.00 via Bitcoin... Transaction confirmed!
-
-
-#Class
-# Example 2: Media Player Polymorphism - Setter and Getter - polymorphism
-class MediaPlayer:
-    def __init__(self):
-        self._playing = False
-
-    def set_playing(self, status):
-        self._playing = status    
-    
-    def get_playing(self):
-        return self._playing
-    
-    def play(self):
-        print("Playing media")
-
-class VideoPlayer(MediaPlayer):
-    def play(self):
-        print("Playing video with both audio and visuals")
-
-class AudioPlayer(MediaPlayer):
-    def play(self):
-        print("Playing audio")
-
-class ImageViewer(MediaPlayer):
-    def play(self):
-        print("Displaying image")
-# Test Media Players
-video = VideoPlayer()
-audio = AudioPlayer()
-image = ImageViewer()
-
-video.play()
-audio.play()
-image.play()
 
 #Private Employee
 class Employee:
@@ -275,11 +196,8 @@ t = Timer()
 t.countdown(3)
 
 
-
 #datetime - Getting current date and time
 import datetime
 
 now = datetime.datetime.now()
 print(now)
-
-
