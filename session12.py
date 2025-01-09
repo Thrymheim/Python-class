@@ -172,14 +172,20 @@ class NumberGuesser:
     def check_guess(self, guess):
         if guess == self.secret:
             print("You got it!")
+            return True  # Return True if the guess is correct
         elif guess > self.secret:
             print("Too high!")
         else:
             print("Too low!")
+        return False  # Return False if the guess is incorrect
 
 game = NumberGuesser()
-guess = int(input("Guess a number between 1-10: "))
-game.check_guess(guess)
+
+while True:
+    guess = int(input("Guess a number between 1-10: "))
+    if game.check_guess(guess):
+        break  # Exit the loop if the guess is correct
+    
 
 #Timer - import time
 import time
