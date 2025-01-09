@@ -83,7 +83,7 @@ print(car.get_year())  # Output: 2021
 ####################################################################
 
 # Part 3: Advanced OOP Concepts
-# This session covers polymorphism, private and __str__
+# This session covers polymorphism, private, __str__, random, Time and datetime
 
 #Shape Polymorphism - Means using one method for multiple classes the way it can adjust itself for each one
 class Shape:
