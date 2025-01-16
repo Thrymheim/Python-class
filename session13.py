@@ -4,7 +4,7 @@ while counter <= 5:
     print(counter)
     counter += 1
 
-#Class - factorial
+#factorial
 n=int(input("please enter number:"))
 i,fact=1,1
 while i<=n:
@@ -13,7 +13,7 @@ while i<=n:
   i+=1
 print(fact)
 
-#Class - original == reverse ?
+#Original == reverse ?
 number = int(input("Enter a number: "))
 original_number = number  # ذخیره عدد اصلی
 reversed_number = 0
@@ -43,8 +43,6 @@ print(dict_values_to_list)  # Output: [1, 2, 3]
 # Type casting to list (items)
 dict_items_to_list = list(my_dict.items())
 print(dict_items_to_list)  # Output: [('a', 1), ('b', 2), ('c', 3)]
-
-#Class - list -->tuple and set, tuple --> list and set, set --> list and tuple
 
 # Original list
 my_list = [1, 2, 3, 4]
@@ -88,7 +86,7 @@ def analyze_number(n):
 number_info = analyze_number(-4)
 print(f"Number analysis - Even: {number_info[0]} \n Positive: {number_info[1]}")
 
-#Class
+#Another example
 def three_analyze_number(n):
     is_odd = n % 2 == 1
     is_negetive = n < 0
@@ -111,10 +109,6 @@ def say_hello():
     print("I'm saying hello!")
 say_hello()
 
-#Class -->
-#prit(hi im name, age, city)
-#i start programming cus ...
-#what do i think of programming now?...
 #Decorators def
 def programming_decorator(func):
     def wrapper():
@@ -129,7 +123,7 @@ def say():
     print("I wanted to communicate with the computer")
 say()
 
-#Class - sum_multiplyer_decorator
+#sum_multiplyer_decorator
 def sum_multiplyer_decorator(func):
     def wrapper(a, b):
         print(f"Original result: {func(a, b)}")
@@ -190,36 +184,14 @@ print(zipped_list)
 numbers = [x for x in range(1, 11)]
 print(numbers)
 
-#class
+#Another example
 numbers = [1, 2, 3, 4, 5]
 squares = [x ** 2 for x in numbers]
 print(squares)
 
-#Function with Multiple Returns
-def analyze_number(n):
-    is_even = n % 2 == 0
-    is_positive = n > 0
-    return is_even, is_positive
-number_info = analyze_number(-4)
-print(f"Number analysis - Even: {number_info[0]} \n Positive: {number_info[1]}")
-
-
-#Filter
-def filter_even_numbers(numbers):
-    """Filters out even numbers from a list."""
-    even_numbers = list(filter(lambda x: x % 2 == 0, numbers))
-    return even_numbers
-
-# Example usage
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-even_numbers = filter_even_numbers(numbers)
-print(f"Even numbers: {even_numbers}")
-
-#Class x > 0 and x % 2 == 0 
-
 #Any and All
 def check_conditions(numbers):
-    """Checks if any number is even and if all numbers are positive."""
+    #Checks if any number is even and if all numbers are positive
     any_even = any(x % 2 == 0 for x in numbers)
     all_positive = all(x > 0 for x in numbers)
     return any_even, all_positive
