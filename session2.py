@@ -25,20 +25,20 @@ print(userName.rstrip())
 #remove space from both sides
 print(userName.strip())
 
-#do it with ur name
-
-#or u can write like this
+#or u can write like this with puting it in a variable
 x = userName.strip()
 print(x)
 
 #Types
-name="amir123"
+name="Maziyar123"
 score=20
 height=1.90
+alive = True
 
 print(type(name))
 print(type(score))
 print(type(height))
+print(type(alive))
 
 #library
 import math
@@ -47,11 +47,12 @@ print(math.sqrt(16))
 #input is for getting data from user
 name=input("please enter your name: ")
 print(f"you`r name is {name}")
+
 #for gettting number input we use int(input())
 number=int(input())
 print(f"your number is {number}")
 
-#class
+#Example
 a,b = int(input()),int(input())
 print(a+b)
 print(a*b)
@@ -65,11 +66,11 @@ print(b//a)
 scores=[20,19,18,17,16,15,14]
 #printing whole list
 print(scores)
-#printing a specific index
+#printing a specific index --> starts from 0
 print(scores[3])
 #printing the type of scores
 print(type(scores))
-#printing our list length
+#printing our list length --> starts from 1
 print(len(scores))
 #printing our list sorted
 print(sorted(scores))
@@ -77,7 +78,7 @@ print(sorted(scores, reverse=True))
 #using our list in a sentence
 print(f'Hello my grade is {scores[3]}')
 
-#Class
+#Example
 y=["python","cpp","c#","java","php"]
 print(y)
 print(type(y))
@@ -107,7 +108,7 @@ students = ["amir","ALI","mmd"]
 students.append(input("Plz enter a name : "))
 print (students)
 
-#insert --> append always add in the end of the list but with insert u chose where to input *
+#insert --> append always add in the end of the list but with insert u chose where to input 
 students = ["amir","ALI","mmd"]
 students.insert(int(input("Plz enter a number : ")),input("Plz enter a name : "))
 print (students)
@@ -143,7 +144,7 @@ Grades = [18,19,20]
 studentsGrades = zip(students,Grades)
 print(list(studentsGrades))
 
-#Class --> zip pf three lists
+#Example
 students = ["amir","ALI","mmd"]
 Grades = [18,19,20]
 schools = ["1","2","3"]
@@ -158,8 +159,7 @@ print(a is b)
 print(a is c)
 
 
-#IF and elif and else
-
+#if and elif and else
 number = int(input("pls enter a number : "))
 if number > 10 :
  print ("pass")
@@ -168,6 +168,7 @@ elif number == 10 :
 else :
  print ("fail")
 
+#Example
 seasson=int(input())
 if seasson==1:
   print("bahar")
@@ -180,26 +181,29 @@ elif seasson==4:
 else:
   print("Error")
 
+#Example
 name = input("pls enter a name")
 if name == "maziyar" :
  print ("ostad")
 else :
  print ("student")
 
+#Example
 name=input()
+# != means not equeal, == means equal, >= means equal and higher, <= means equal or lower
 if name!="maziyar":
   print("student")
 else:
   print("ostad")
 
-#and
+#and --> works when all of our conditions are True
 number = int(input("pls enter a number so i tell u if u can divide it by 6 "))
 if number%2==0 and number%3==0 :
  print ("yes u can divide it")
 else :
  print ("no u cant")
 
-#or
+#or --> works when atleast one of our conditions is True
 number = int(input("Enter a number "))
 if number>10 or number==10 :
  print ("pass")
@@ -208,10 +212,21 @@ else :
 
  
 #if u want to check if a word is in a list u can use "in"
-# Check if a word is in a list
 fruits = ["apple", "banana", "cherry"]
 word = input("Enter a word: ")
 if word.lower() in fruits: #not in is basically this but reversed
     print("The word is in the list")
 else:
     print("The word is not in the list")
+
+#Example
+a=int(input("Enter a : "))
+b=int(input("Enter b : "))
+c=int(input("Enter c : "))
+if a>=b and a>=c :
+ print (a)
+elif b>=c and b>=a :
+ print (b)
+else:
+ print (c) 
+    
