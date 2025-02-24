@@ -159,7 +159,7 @@ print(a is b)
 print(a is c)
 
 
-#if and elif and else
+#if and elif and else - we can only use if and else once but can use elif as much as we wanted
 number = int(input("pls enter a number : "))
 if number > 10 :
  print ("pass")
