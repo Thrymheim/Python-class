@@ -118,7 +118,7 @@ students = ["amir","ALI","mmd"]
 del students [2]
 print (students)
 
-#pop
+#pop - unlike del we can restore value that we delted in a variable when we use pop
 students = ["amir","ALI","mmd"]
 deletedStudents=students.pop(0)
 print (deletedStudents)
