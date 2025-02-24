@@ -55,7 +55,7 @@ print("kolagar")
 name="maziyar"
 print(f"hello my name is {name.title()} can program by:\n\t1:cpp\n\t2:python\n\t3:c#") 
 
-#format is the same but its just useless honestly
+#format is the same as fstring but its just honestly useless 
 firstName="maziyar"
 lastName="kolagar"
 fullName="{}  {}".format(firstName.upper(),lastName.title())
