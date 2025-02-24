@@ -13,7 +13,7 @@ print(a+b)
 
 #You can comment using CTRL + ?
 
-#Lower_case
+#snake_case
 first_name="Maziyar"
 #camelCase
 firstName="Maziyar"
