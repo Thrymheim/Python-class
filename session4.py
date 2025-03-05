@@ -92,7 +92,7 @@ for key,value in student.items():
 print(student.keys())
 print(student.values())
 
-#Class
+#Excersie
 favoriteLanguages={
   'amir':'cpp',
   'ali':'python',
@@ -102,7 +102,7 @@ print(favoriteLanguages.items()) #key + value
 print(favoriteLanguages.keys())
 print(favoriteLanguages.values())
 
-#Class
+#Excersie
 user1={
   'username':'Maziyar',
   'password':'a123'
@@ -119,7 +119,6 @@ elif username==user2['username'] and password==user2['password']:
 else:
   print("cant login")
 
-#class
 #This method gets the keys and values together
 for name,language in favoriteLanguages.items():
   print(f"{name.upper()} favorite language is {language.title()}")
@@ -136,27 +135,6 @@ for user in users:
     break
 else:
   print("you need sign up at first")
-
-#Class
-students1={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-students2={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-students3={
-  'amir':{'age':23,'skill':'python'},
-  'ali':{'age':25,'skill':'cpp'},
-  'zolfaghari':{'age':22,'skill':'csharp'}
-}
-all=[students1,students2,students3]
-for i in all:
-  for name,info in i.items():
-    print(f"{name} info: {info}")
 
 #List can be in dictionary
 programmers={
@@ -178,7 +156,7 @@ students={
 for name,info in students.items():
   print(f"{name} info: {info}")
 
-#Class
+#Excersie
 books = {
     'book1': {'title': '1984', 'author': 'George Orwell', 'year': 1949},
     'book2': {'title': 'To Kill a Mockingbird', 'author': 'Harper Lee', 'year': 1960},
