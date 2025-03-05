@@ -164,3 +164,37 @@ books = {
 }
 for book_id, details in books.items():
     print(f"{book_id} details: {details}")
+
+#Excersie
+favoriteLanguages={
+  'amir':'cpp',
+  'ali':'farsi',
+  'zolfaghari':'csharp'
+}
+programmers=["amir","zolfaghari"]
+for name in favoriteLanguages.keys():
+  if name in programmers:
+    print(f"{name} is programmer and student")
+  else:
+    print(f"{name} just a student")
+
+#Excersie
+students = {
+    'Alex': 85,
+    'Beth': 92,
+    'Charlie': 78,
+    'Diana': 95
+}
+# Add new student score
+new_student = input("Enter student name: ")
+new_score = int(input("Enter their score: "))
+students[new_student] = new_score
+# Find highest and lowest scores
+highest_score = max(students.values())  
+lowest_score = min(students.values())
+# Print all students with their grades
+print("\nClass Scores:")
+for student, score in students.items():
+    print(f"{student}: {score}")
+print(f"\nHighest score: {highest_score}")
+print(f"Lowest score: {lowest_score}")
