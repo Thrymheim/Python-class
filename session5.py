@@ -97,13 +97,10 @@ else:
     print("Teacher not found")
 
 
-#Class
+#Excercise
 teacher1 = ('John', 35, 'Math', 50000)
 teacher2 = ('Sarah', 28, 'Physics', 48000)
 teacher3 = ('Mike', 41, 'English', 52000)
-
-print("Search for teacher information")
-print("Available subjects: Math, Physics, English")
 
 subject = input("Enter subject to search: ")
 
@@ -133,7 +130,7 @@ school_data = (
 )
 print(school_data[0][1][1])  # Access students in Class A
 
-#class
+#Excercise
 tournament_data = (
     ('Team Red', ('Alex', 'Emma', 'James')),
     ('Team Blue', ('Sofia', 'Lucas', 'nolan')),
@@ -166,7 +163,7 @@ courses = ('Python', 'Java', 'C++', 'JavaScript')
 for course in courses:
     print(f"We offer {course} programming")
 
-#Class
+#Excercise
 destinations = ('Paris', 'Tokyo', 'Rome', 'New York', 'Dubai')
 landmarks = ('Eiffel Tower', 'Mount Fuji', 'Colosseum', 'Statue of Liberty', 'Burj Khalifa')
 for i in range(len(destinations)):
@@ -188,7 +185,7 @@ elif student_name == student2[0]:
 else:
     print("Student not found")
 
-#شهرکتاب
+#Excercise
 # Define book tuples
 book1 = ('Pride and Prejudice', 'Jane Austen', 1813)
 book2 = ('To Kill a Mockingbird', 'Harper Lee', 1960)
@@ -259,7 +256,6 @@ match month:
 # Match the operation and perform calculation
 # Get the operation from user
 operation = input("Enter operation (+, -, *, /): ")
-
 # Get two numbers
 num1 = float(input("Enter first number: "))
 num2 = float(input("Enter second number: "))
