@@ -82,14 +82,6 @@ file.write("Maziyar\n20")
 file=open('Me.txt','r')
 print(file.read())
 
-
-# Define the students dictionary first
-students = {
-    "Alice": {"active": True, "age": 20, "grades": [85, 90, 78]},
-    "Bob": {"active": True, "age": 22, "grades": [88, 92, 95]},
-    "Charlie": {"active": False, "age": 21, "grades": [80, 85, 88]}
-}
-
 # 1. Basic Function Definition
 def sayHello():
     print("hello")
