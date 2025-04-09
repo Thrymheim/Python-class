@@ -154,46 +154,133 @@ students = {
     "Charlie": {"active": False, "age": 21, "grades": [80, 85, 88]}
 }
 
-# Class
-# Create a new file and write student records to it name, active, age, average, and grade status A B C D
-file = open('student_data.txt', 'w')
-file.write("STUDENT RECORDS\n")
+# 1. Basic Function Definition
+def sayHello():
+    print("hello")
+sayHello()
 
-# Process each student
-for student_name, student_data in students.items():
-    print(f"\nStudent: {student_name}")
-    
-    # Check status
-    if student_data["active"]:
-        status = "Currently Enrolled"
-    else:
-        status = "Not Enrolled"
-        
-    # Calculate average directly
-    average = sum(student_data["grades"]) / len(student_data["grades"])
-    
-    # Grade evaluation
-    if average >= 90:
-        grade_status = "A"
-    elif average >= 80:
-        grade_status = "B"
-    elif average >= 70:
-        grade_status = "C"
-    else:
-        grade_status = "D"
-    
-    # Write to file - use append mode
-    file.write(f"\n{student_name}\n")
-    file.write(f"Status: {status}\n")
-    file.write(f"Age: {student_data['age']}\n")
-    file.write(f"Average: {average}\n")
-    file.write(f"Grade: {grade_status}\n")
-    
-    # Display on screen
-    print(f"Status: {status}")
-    print(f"Age: {student_data['age']}")
-    print(f"Average: {average}")
-    print(f"Grade: {grade_status}")
+#Class write a function thar print name then last name and then print your age
+def printall():
+    print("maziyar")
+    print("kolagar")
+    print("20")
+printall()
 
-# Close the file when done
-file.close()
+# 2. Functions with Input
+def multiplyFive():
+    n = int(input("Please enter number for multiplication: "))
+    print(n * 5)
+multiplyFive()
+
+#class write a function that takes two numbers and return the sum of them
+def sumTwoNumbers():
+    n1 = int(input("Please enter number 1: "))
+    n2 = int(input("Please enter number 2: "))
+    print(n1 + n2)
+sumTwoNumbers()
+
+# 3. Functions with Parameters
+def multiplyFive(n):
+    print(f"{n} multiplied by 5 = {n * 5}")
+#we give it a number
+multiplyFive(10) 
+
+#user gives it a number
+number = int(input("Please enter number to multiply: "))
+multiplyFive(number)
+print()
+
+# 4. Functions with Default Parameters
+def Greet(name="amir", age=23):
+    print(f"name is {name} and {age} year's old")
+
+Greet()
+Greet(name="ali", age=20)
+print()
+
+# 5. Functions with Return Values - they do the job but wont print anything until we print it
+def multiplyFive(n):
+    return n * 5
+multiplyFive(5) # --> this will not print anything
+print(f"Direct print: {multiplyFive(5)}")
+
+#Class
+#user gives it a number
+result = int(input("Please enter number for multiplication: "))
+print(f"Result stored in variable: {multiplyFive(result)}")
+
+#Class
+# 6. Factorial Function
+def factorial(n):
+    fact = 1
+    for i in range(1, n + 1):
+        fact *= i
+    return fact
+print(f"Factorial of 5 is: {factorial(5)}")
+
+#Class power function
+def power(base, exponent):
+    result = 1
+    for i in range(exponent):
+        result *= base
+    return result
+print(f"2^3 = {power(2, 3)}")
+
+#CLASS
+#fact recurssive
+def factorial(n):
+    if n == 0 or n == 1:
+        return 1
+    
+    return n * factorial(n - 1)
+
+# Test with some values
+for i in range(6):
+    print(f"Factorial of {i} is {factorial(i)}")
+
+#power recurive
+def power(base, exponent):
+    # Base case: any number raised to the power of 0 equals 1
+    if exponent == 0:
+        return 1
+    
+    # مثل فاکتوریل همینطوری از کم باید شروع کنه
+    return base * power(base, exponent - 1)
+
+# Get user input for base and exponent
+base = float(input("Enter the base number: "))
+exponent = int(input("Enter the exponent (a non-negative integer): "))
+
+# Validate that exponent is non-negative
+if exponent < 0:
+    print("Please enter a non-negative exponent for this recursive function.")
+else:
+    # Calculate and display the result
+    result = power(base, exponent)
+    print(f"{base} raised to the power of {exponent} is {result}")
+
+
+# 7. Multiple Parameters
+def greet(name, lastName, age):
+    return f"my name is {name} {lastName} and i am {age} year's old"
+
+print(greet("Maziyar", "kolagar", 20))
+
+#Class do it with user input
+name,lastname,age = input("Please enter your name, lastname and age: ").split() #split() splits the input by space
+print(greet(name,lastname,age))
+
+#Class
+# 8. Calculator
+def calculate(operation, a, b):
+    if operation == "add":
+        return a + b
+    elif operation == "subtract":
+        return a - b
+    elif operation == "multiply":
+        return a * b
+    elif operation == "divide":
+        return a / b
+    else:
+        return "Invalid operation"
+print(f"Add 5 and 3: {calculate('add', 5, 3)}")
