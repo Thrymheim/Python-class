@@ -82,12 +82,13 @@ file.write("Maziyar\n20")
 file=open('Me.txt','r')
 print(file.read())
 
+#Def
 # 1. Basic Function Definition
 def sayHello():
     print("hello")
 sayHello()
 
-#Class write a function thar print name then last name and then print your age
+#function that print name then last name and then print your age
 def printall():
     print("maziyar")
     print("kolagar")
@@ -100,7 +101,7 @@ def multiplyFive():
     print(n * 5)
 multiplyFive()
 
-#class write a function that takes two numbers and return the sum of them
+#function that takes two numbers and return the sum of them
 def sumTwoNumbers():
     n1 = int(input("Please enter number 1: "))
     n2 = int(input("Please enter number 2: "))
@@ -132,12 +133,6 @@ def multiplyFive(n):
 multiplyFive(5) # --> this will not print anything
 print(f"Direct print: {multiplyFive(5)}")
 
-#Class
-#user gives it a number
-result = int(input("Please enter number for multiplication: "))
-print(f"Result stored in variable: {multiplyFive(result)}")
-
-#Class
 # 6. Factorial Function
 def factorial(n):
     fact = 1
@@ -146,7 +141,7 @@ def factorial(n):
     return fact
 print(f"Factorial of 5 is: {factorial(5)}")
 
-#Class power function
+#Power function
 def power(base, exponent):
     result = 1
     for i in range(exponent):
@@ -154,51 +149,15 @@ def power(base, exponent):
     return result
 print(f"2^3 = {power(2, 3)}")
 
-#CLASS
-#fact recurssive
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    
-    return n * factorial(n - 1)
-
-# Test with some values
-for i in range(6):
-    print(f"Factorial of {i} is {factorial(i)}")
-
-#power recurive
-def power(base, exponent):
-    # Base case: any number raised to the power of 0 equals 1
-    if exponent == 0:
-        return 1
-    
-    # مثل فاکتوریل همینطوری از کم باید شروع کنه
-    return base * power(base, exponent - 1)
-
-# Get user input for base and exponent
-base = float(input("Enter the base number: "))
-exponent = int(input("Enter the exponent (a non-negative integer): "))
-
-# Validate that exponent is non-negative
-if exponent < 0:
-    print("Please enter a non-negative exponent for this recursive function.")
-else:
-    # Calculate and display the result
-    result = power(base, exponent)
-    print(f"{base} raised to the power of {exponent} is {result}")
-
-
 # 7. Multiple Parameters
 def greet(name, lastName, age):
     return f"my name is {name} {lastName} and i am {age} year's old"
-
 print(greet("Maziyar", "kolagar", 20))
 
-#Class do it with user input
+#User input
 name,lastname,age = input("Please enter your name, lastname and age: ").split() #split() splits the input by space
 print(greet(name,lastname,age))
 
-#Class
 # 8. Calculator
 def calculate(operation, a, b):
     if operation == "add":
