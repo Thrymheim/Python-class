@@ -1,126 +1,11 @@
-# # 1. Basic Function Definition
-# def sayHello():
-#     print("hello")
-# sayHello()
-
-# #Class write a function thar print name then last name and then print your age
-# def printall():
-#     print("maziyar")
-#     print("kolagar")
-#     print("20")
-# printall()
-
-# # 2. Functions with Input
-# def multiplyFive():
-#     n = int(input("Please enter number for multiplication: "))
-#     print(n * 5)
-# multiplyFive()
-
-# #class write a function that takes two numbers and return the sum of them
-# def sumTwoNumbers():
-#     n1 = int(input("Please enter number 1: "))
-#     n2 = int(input("Please enter number 2: "))
-#     print(n1 + n2)
-# sumTwoNumbers()
-
-# # 3. Functions with Parameters
-# def multiplyFive(n):
-#     print(f"{n} multiplied by 5 = {n * 5}")
-# #we give it a number
-# multiplyFive(10) 
-
-# #user gives it a number
-# number = int(input("Please enter number to multiply: "))
-# multiplyFive(number)
-# print()
-
-# # 4. Functions with Default Parameters
-# def Greet(name="amir", age=23):
-#     print(f"name is {name} and {age} year's old")
-
-# Greet()
-# Greet(name="ali", age=20)
-# print()
-
-# # 5. Functions with Return Values - they do the job but wont print anything until we print it
-# def multiplyFive(n):
-#     return n * 5
-# multiplyFive(5) # --> this will not print anything
-# print(f"Direct print: {multiplyFive(5)}")
-
-# #Class
-# #user gives it a number
-# result = int(input("Please enter number for multiplication: "))
-# print(f"Result stored in variable: {multiplyFive(result)}")
-
-# #Class
-# # 6. Factorial Function
-# def factorial(n):
-#     fact = 1
-#     for i in range(1, n + 1):
-#         fact *= i
-#     return fact
-# print(f"Factorial of 5 is: {factorial(5)}")
-
-# #Class power function
-# def power(base, exponent):
-#     result = 1
-#     for i in range(exponent):
-#         result *= base
-#     return result
-# print(f"2^3 = {power(2, 3)}")
-
-# #CLASS
-# #fact recurssive
-# def factorial(n):
-#     if n == 0 or n == 1:
-#         return 1
-    
-#     return n * factorial(n - 1)
-
-# # Test with some values
-# for i in range(6):
-#     print(f"Factorial of {i} is {factorial(i)}")
-
-# # 7. Multiple Parameters
-# def greet(name, lastName, age):
-#     return f"my name is {name} {lastName} and i am {age} year's old"
-
-# print(greet("Maziyar", "kolagar", 20))
-
-# #Class do it with user input
-# name,lastname,age = input("Please enter your name, lastname and age: ").split() #split() splits the input by space
-# print(greet(name,lastname,age))
-
-# #Class
-# # 8. Calculator
-# def calculate(operation, a, b):
-#     if operation == "add":
-#         return a + b
-#     elif operation == "subtract":
-#         return a - b
-#     elif operation == "multiply":
-#         return a * b
-#     elif operation == "divide":
-#         return a / b
-#     else:
-#         return "Invalid operation"
-# print(f"Add 5 and 3: {calculate('add', 5, 3)}")
-
-#######################################################################
-
-#CLASS
 #fact recurssive
 def factorial(n):
     if n == 0 or n == 1:
         return 1
-    
     return n * factorial(n - 1)
-
 # Test with some values
 for i in range(6):
     print(f"Factorial of {i} is {factorial(i)}")
-
 
 # Define the students dictionary first
 students = {
@@ -129,8 +14,7 @@ students = {
     "Charlie": {"active": False, "age": 21, "grades": [80, 85, 88]}
 }
 
-# Class
-# Create a new file and write student records to it name, active, age, average, and grade status A B C D
+# Create a new file and write student records to it name, active, age and average
 file = open('student_data.txt', 'w')
 file.write("STUDENT RECORDS\n")
 
@@ -159,10 +43,6 @@ for student_name, student_data in students.items():
     print(f"Status: {status}")
     print(f"Age: {student_data['age']}")
     print(f"Average: {average}")
-
-
-# Close the file when done
-file.close()
 
 #توابع ابتدایی
 def check_backpack(item):
@@ -198,12 +78,11 @@ def makeDictionary(username, password, email):
 user_info = makeDictionary("maziyar", "1234", "maziyarkolagar@gmail.com")
 print(f"User Info: {user_info}")
 
-#or like this - using input and variables - CLASS
+#or like this - using input and variables
 username,password,email = input("Please enter username and passsword and email: ").split()
 user_info2 = makeDictionary(username, password, email)
 print(f"User Info: {user_info2}")
 
-#Class
 # 10. List Operations
 def introduce(users):
     for user in users:
@@ -218,7 +97,6 @@ def sayHello(*names):
         print(f"hello {name}")
 sayHello("amir", "reza", "jfr", "mani")
 
-#class
 # 15. Temperature Converter 
 def convertToFahrenheit(*degrees):
     for degree in degrees:
@@ -234,7 +112,6 @@ def introduceFoods(**foods):
 introduceFoods(burger=50, pizza=300, chicken=200)
 
 # 17. Lambda Functions
-#Class - to write this first
 #its same as 
 def multiply(x, y):
      return x * y
@@ -264,7 +141,7 @@ def divide_numbers(a, b):
 print("Testing different division cases:")
 print(f"Normal division: {divide_numbers(10, 2)}")
 print(f"Division by zero: {divide_numbers(10, 0)}")
-print(f"String input: {divide_numbers('10', 2)}")
+print(f"String input: {divide_numbers('s', 2)}")
 
 # 20. Function with Multiple Returns
 def analyze_number(n):
@@ -288,7 +165,6 @@ def say_hello():
     print("I'm saying hello!")
 say_hello()
 
-#Class
  #بازشگت معکوس
 def reverseNumber(n):
     temp, reverse = n, 0
