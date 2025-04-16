@@ -178,3 +178,53 @@ def reverseNumber(n):
 
 reverseNumber(121)
 reverseNumber(123)
+
+
+# OOP (Object Oriented Programming)
+# Part 1: Introduction to Classes and Objects
+#What is class?
+print(type(1))
+print(type('s'))
+print(type([1,2,3]))
+
+#First Example: Student Class
+class Student:
+    #constructor
+    #method is a function inside a class
+    #__init__ is a special method that is called when an object is created from a class
+    def __init__(self,firstName,lastName,score) :
+        #self is a reference to the current object being created
+        self.firstName=firstName
+        self.lastName=lastName
+        self.score=score
+
+s = Student("amir","ahmadi",20)
+print(s.firstName)
+print(s.lastName)
+print(s.score)
+print(type(s))
+#for changing name or something
+s.firstName="ali"
+print(s.firstName)
+
+#1. Class Attributes
+class Student:
+    def __init__(self,firstName,lastName,score) :
+        self.firstName=firstName
+        self.lastName=lastName
+        self.score=score
+    def calculateBirthyear(self) :
+        return 2023 - self.age
+s = Student("amir","ahmadi",20)
+print(s.schoolName)
+print(s.calculateBirthyear())
+
+#Mostatil Class - using input - no method
+class Mostatil :
+    def __init__ (self,tol,ars) :
+        self.tol=tol
+        self.ars=ars
+    def masahat(self):
+        return self.tol * self.ars
+s=Mostatil(int(input('tol: ')),int(input('ars: ')))
+print(f"masahat --> {s.masahat()} ")   
