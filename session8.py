@@ -71,7 +71,7 @@ print(hero.heal())
 print(hero.level_up())
 hero.display_stats()
 ##########################################################################################3
-#Employee Class - Class
+#Employee Class
 class Employee : 
     def __init__ (self,firstName,lastName,birthday,company,sallery,hiredYear):
         self.firstName=firstName
@@ -145,42 +145,6 @@ class Employee(Person):
 # Test Person-Employee
 employee = Employee("Amir", "Amiri", "Iran", 20, 205, 2000, "google")
 print(employee.firstName)
-
-# Example 2: Food Hierarchy - Class
-# Shows inheritance with method overriding
-class Food:
-    def __init__(self, name, price):
-        self.name = name
-        self.price = price
-    
-    def show_info(self):
-        print(f"{self.name}: ${self.price}")
-
-class Pizza(Food):
-    def __init__(self, name, price, toppings):
-        super().__init__(name, price)
-        self.toppings = toppings
-    
-    def add_topping(self):
-        print(f"Added {self.toppings} to {self.name}")
-
-class Drink(Food):
-    def __init__(self, name, price, size):
-        super().__init__(name, price)
-        self.size = size
-    
-    def make_cold(self):
-        print(f"Your {self.size} {self.name} is now cold!")
-
-# Test Menu
-pizza1 = Pizza("Pepperoni", 12, "extra cheese")
-drink1 = Drink("Coca Cola", 3, "large")
-
-pizza1.show_info()
-pizza1.add_topping()
-drink1.show_info()
-drink1.make_cold()
-
 
 # For Encapsulation, we use protected and private attributes
 class BankAccount:
